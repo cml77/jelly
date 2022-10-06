@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Rubik&display=swap" rel="stylesheet">
+
+    <title>Jelly no Puzzle</title>
+</head>
+<body>
+
+    <audio id="tap01_sound" src="/assets/audio/tap01.ogg"></audio>
+    <audio id="thump01_sound" src="/assets/audio/thump01.ogg"></audio>
+    <audio id="move01_sound" src="/assets/audio/move02.ogg"></audio>
+    <audio id="glup01_sound" src="/assets/audio/glup01.ogg"></audio>
+    <audio id="victory_flute_sound" src="/assets/audio/victory_flute.ogg"></audio>
+
+    <div id="root">
+        <div style="margin: 0 auto; max-width: 1024px">
+            <div style="margin: 20px">
+                <h1 class="header">Jelly No Puzzle (Remake)</h1>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Select Level</td>
+                            <td><select id="level-select"></select></td>
+                        </tr>
+                        <tr>
+                            <td>Audio</td>
+                            <td><button id="audio_toggle_button">turn off</button></td>
+                        </tr>
+                        <tr valign="top">
+                            <td>Cheatsheet</td>
+                            <td><ul>
+                                <li>
+                                    <strong>Z</strong>: undo move.
+                                </li>
+                                <li>
+                                    <strong>R</strong>: reset level.
+                                </li>
+                                <li>
+                                    <strong>F</strong>: toggle fullscreen.
+                                </li>
+                                <li>
+                                    <strong>G</strong>: toggle grid.
+                                </li>
+                                <li>
+                                    <strong>I</strong>: toggle between direct input (default) or old school click mode (right click is move right).
+                                </li>
+                            </ul></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+        <div id="canvas_container">
+            <div id="canvas_wrapper">
+                <canvas style="background-color: rgb(192, 192, 192)" id="opengl_canvas" width="1280" height="720"></canvas>
+
+                
+                <div id="button-container">
+                    <button id="undo_button">undo</button>
+                    <button id="reset_button">reset</button>
+                    <button id="next_button" style="visibility: hidden;">next</button>
+                </div>
+                
+                
+                
+                
+            </div>
+        </div>
+        <div style="margin: 0 auto; max-width: 1024px">
+            
+        </div>
+    </div>
+
+    <div id="footer" style="margin-top: 120px; padding: 40px; text-align: center;">
+        remade by sander vermeer - <a href="https://github.com/mohragk/jelly-no-puzzle">github</a> <a href="https://sander-vermeer.nl">homepage</a>
+    </div>
+</body>
+
+<script src="settingsAndGlobals.js"></script>
+<script type="module" src="game.js"></script>
+</html>
